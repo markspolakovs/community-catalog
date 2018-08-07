@@ -8,6 +8,8 @@ jenkins-primary:
   volumes_from:
     - jenkins-plugins
     - jenkins-datavolume
+  env:
+    JENKINS_OPTS: "--prefix=${prefix}"
   entrypoint: /usr/share/jenkins/rancher/jenkins.sh
 jenkins-plugins:
   image: rancher/jenkins-plugins:v0.1.1

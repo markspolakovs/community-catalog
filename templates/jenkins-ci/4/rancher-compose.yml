@@ -10,6 +10,10 @@
     description: "Which port should Jenkins listen on?"
     default: 8080
     required: true
+  - variable: "prefix"
+    description: "Which path prefix should Jenkins base its URLs on?"
+    required: true
+    default: "/"
   - variable: "volume_work"
     description: "Work volume to save jenkins data"
     label: "Work volume:"
